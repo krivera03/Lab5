@@ -19,8 +19,11 @@ void dlista_insertar_despues(DNodo **head, DNodo *pos, int dato);
 /* Elimina el nodo apuntado por 'nodo'. O(1). */
 void dlista_eliminar_nodo(DNodo **head, DNodo *nodo);
 
-/* Imprime hacia adelante y hacia atrás. */
-void dlista_imprimir(DNodo *head);
+/* Imprime hacia adelante  */
+void dlista_imprimir_adelante(DNodo *head);
+
+/* Imprime hacia atrás. */
+void dlista_imprimir_atras(DNodo *head);
 
 /* Libera todos los nodos. */
 void dlista_liberar(DNodo **head);

@@ -10,23 +10,31 @@ DNodo *dnodo_crear(int dato) {
 }
 
 /* DADA: imprimir hacia adelante y atrás */
-void dlista_imprimir(DNodo *head) {
+void dlista_imprimir_adelante(DNodo *head) {
     DNodo *cur = head;
-    DNodo *ultimo = NULL;
-    printf("FWD: ");
+    //printf("FWD: ");
     while (cur) {
         printf("%d ", cur->dato);
         ultimo = cur;
         cur = cur->next;
     }
-    printf("\nBWD: ");
-    cur = ultimo;
+    printf("\n");
+    //printf("\nBWD: ");
+   
+    }
+
+/* DADA: imprimir hacia adelante y atrás */
+void dlista_imprimir_atras(DNodo *head) {
+    DNodo *cur = NULL;
     while (cur) {
         printf("%d ", cur->dato);
         cur = cur->prev;
-    }
+        }
     printf("\n");
-}
+    //printf("\nBWD: ");
+   
+    }
+    
 
 /* TODO: insertar al inicio
  * Similar a la lista simple pero también actualizar prev
