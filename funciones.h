@@ -12,4 +12,8 @@ typedef struct{
 /*Inicia el arreglo dinámico*/
 void da_init(DinaArray *arreglo, size_t capacidad);
 
+/* Agrega un elemento al final del arreglo. */
+void da_push(DinaArray *arreglo, int valor);
+
+
 #endif
