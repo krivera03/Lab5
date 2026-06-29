@@ -54,11 +54,32 @@ void dlista_insertar_inicio(DNodo **head, int dato) {
     /* TODO */
 }
 
+void dlista_insertar_final(DNodo **head, int dato) {
+    //Se debe revisar si la lista esta vacia, si no lo esta se debe actualizar el puntero prev del nodo que era head para que apunte al nuevo nodo creado.
+    
+    if (*head == NULL) {
+        *head = dnodo_crear(dato); //crea nodo y asignarle head si no existe
+    } else {
+        DNodo *nuevo_ultimo = dnodo_crear(dato); // crea nodo
+        Dnodo *ultimo = *head; // crea un puntero para recorrer la lista y encontrar el ultimo nodo
+        while (ultimo->next != NULL) { // recorre la lista hasta encontrar el ultimo
+            ultimo = ultimo->next;
+        }
+        ultimo->next = nuevo_ultimo; // hace que el next del ultimo nodo apunte al nuevo nodo
+        nuevo_ultimo->prev = ultimo; // hace que el prev del nuevo nodo apunte al ultimo
+        nuevo_ultimo->next = NULL; // hace que el next del nuevo nodo sea NULL
+    }
+    /* TODO */
+}
+
+
+
+
 /* TODO: insertar después de pos
  * Casos a manejar:
  * - pos->next != NULL: el nuevo nodo queda entre pos y pos->next
  * - pos->next == NULL: el nuevo nodo queda al final */
-void dlista_insertar_despues(DNodo **head, DNodo *pos, int dato) {
+void dlista_insertar_posicion(DNodo **head, DNodo *pos, int dato) {
     /* TODO */
     (void)head;
 }

@@ -13,8 +13,11 @@ DNodo *dnodo_crear(int dato);
 /* Inserta al inicio. */
 void dlista_insertar_inicio(DNodo **head, int dato);
 
-/* Inserta después del nodo apuntado por 'pos'. */
-void dlista_insertar_despues(DNodo **head, DNodo *pos, int dato);
+/* Inserta al final. */
+void dlista_insertar_final(DNodo **head, int dato);
+
+/* Inserta en nodo apuntado por 'pos'. */
+void dlista_insertar_posicion(DNodo **head, DNodo *pos, int dato);
 
 /* Elimina el nodo apuntado por 'nodo'. O(1). */
 void dlista_eliminar_nodo(DNodo **head, DNodo *nodo);
