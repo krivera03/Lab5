@@ -15,5 +15,8 @@ void da_init(DinaArray *arreglo, size_t capacidad);
 /* Agrega un elemento al final del arreglo. */
 void da_push(DinaArray *arreglo, int valor);
 
+/* Devuelve el elemento almacenado en la posición indicada. */
+int da_get(DinaArray *arreglo, size_t indice);
+
 
 #endif
