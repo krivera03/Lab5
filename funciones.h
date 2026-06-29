@@ -18,5 +18,11 @@ void da_push(DinaArray *arreglo, int valor);
 /* Devuelve el elemento almacenado en la posición indicada. */
 int da_get(DinaArray *arreglo, size_t indice);
 
+/* Imprime todos los elementos del arreglo. */
+void da_print(DinaArray *arreglo);
+
+/* Elimina el elemento ubicado en la posición indicada. */
+void da_remove(DinaArray *arreglo, size_t indice);
+
 
 #endif

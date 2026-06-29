@@ -44,9 +44,45 @@ void da_push(DinaArray *arreglo, int valor){
 }
 
 /*
-    Devuelve el elemento ubicado en el índice indicado.
+    Devuelve el elemento solicitado.
+    Si el índice es inválido retorna -1.
 */
 int da_get(DinaArray *arreglo, size_t indice){
 
+    if(indice >= arreglo->size){
+        return -1;
+    }
+
     return arreglo->data[indice];
+}
+
+/*
+    Recorre el arreglo e imprime todos sus elementos.
+*/
+void da_print(DinaArray *arreglo){
+
+    printf("[ ");
+
+    for(size_t i = 0; i < arreglo->size; i++){
+        printf("%d ", arreglo->data[i]);
+    }
+
+    printf("]\n");
+}
+
+/*
+    Elimina un elemento del arreglo.
+    Los elementos posteriores se desplazan una posición hacia la izquierda.
+*/
+void da_remove(DinaArray *arreglo, size_t indice){
+
+    if(indice >= arreglo->size){
+        return;
+    }
+
+    for(size_t i = indice; i < arreglo->size - 1; i++){
+        arreglo->data[i] = arreglo->data[i + 1];
+    }
+
+    arreglo->size--;
 }
