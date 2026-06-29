@@ -25,7 +25,15 @@ void dlista_imprimir_adelante(DNodo *head) {
 
 /* DADA: imprimir hacia atrás */
 void dlista_imprimir_atras(DNodo *head) {
-    DNodo *cur = NULL;
+    DNodo *cur = head;
+    DNodo *ultimo = NULL;
+    //printf("FWD: ");
+    while (cur) {
+        //printf("%d ", cur->dato);
+        ultimo = cur;
+        cur = cur->next;
+    }
+    cur = ultimo;
     while (cur) {
         printf("%d ", cur->dato);
         cur = cur->prev;
@@ -81,13 +89,33 @@ void dlista_insertar_final(DNodo **head, int dato) {
  * - pos->next == NULL: el nuevo nodo queda al final */
 void dlista_insertar_posicion(DNodo **head, DNodo *pos, int dato) {
     /* TODO */
+    
     (void)head;
 }
 
 /* TODO: eliminar un nodo dado su puntero — O(1)
  * Reconectar el prev del siguiente y el next del anterior.
  * Caso especial: el nodo a eliminar es *head. */
-void dlista_eliminar_nodo(DNodo **head, DNodo *nodo) {
+void dlista_eliminar_nodo(DNodo **head, int dato) {
+
+    while (temp != NULL && temp->data != data)
+        temp = temp->next;
+
+    if (temp == NULL) {
+        printf("Elemento no encontrado\n");
+        return;
+    }
+
+    if (temp->prev != NULL)
+        temp->prev->next = temp->next;
+    else
+        *head = temp->next;
+
+    if (temp->next != NULL)
+        temp->next->prev = temp->prev;
+
+    free(temp);
+}
     /* TODO */
 }
 
