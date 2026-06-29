@@ -23,7 +23,7 @@ void dlista_imprimir_adelante(DNodo *head) {
    
     }
 
-/* DADA: imprimir hacia adelante y atrás */
+/* DADA: imprimir hacia atrás */
 void dlista_imprimir_atras(DNodo *head) {
     DNodo *cur = NULL;
     while (cur) {
@@ -40,6 +40,17 @@ void dlista_imprimir_atras(DNodo *head) {
  * Similar a la lista simple pero también actualizar prev
  * del nodo que era head para que apunte al nuevo. */
 void dlista_insertar_inicio(DNodo **head, int dato) {
+    //Se debe revisar si la lista esta vacia, si no lo esta se debe actualizar el puntero prev del nodo que era head para que apunte al nuevo nodo creado.
+    
+    if (*head == NULL) {
+        *head = dnodo_crear(dato); //crea nodo y asignarle head si no existe
+    } else {
+        DNodo *nuevo = dnodo_crear(dato); // crea nodo
+        nuevo->next = *head; // hace que el next sea head actual
+        nuevo->prev = NULL; // hace que el prev sea NULL
+        (*head)->prev = nuevo; // actualiza que prev de head actual apunte al nuevo nodo
+        *head = nuevo; //cambia head al nuevo nodo
+    }
     /* TODO */
 }
 
