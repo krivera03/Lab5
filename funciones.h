@@ -24,5 +24,9 @@ void da_print(DinaArray *arreglo);
 /* Elimina el elemento ubicado en la posición indicada. */
 void da_remove(DinaArray *arreglo, size_t indice);
 
+/* Libera la memoria reservada para el arreglo dinámico. */
+void da_free(DinaArray *arreglo);
+
+
 
 #endif

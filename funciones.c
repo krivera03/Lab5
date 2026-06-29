@@ -86,3 +86,16 @@ void da_remove(DinaArray *arreglo, size_t indice){
 
     arreglo->size--;
 }
+
+/*
+    Libera la memoria utilizada por el arreglo
+    y reinicia sus campos.
+*/
+void da_free(DinaArray *arreglo){
+
+    free(arreglo->data);
+
+    arreglo->data = NULL;
+    arreglo->size = 0;
+    arreglo->capacidad = 0;
+}
