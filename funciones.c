@@ -130,9 +130,25 @@ void dlista_eliminar_nodo(DNodo **head, int dato) {
 
 }
     /* TODO */
-
+void dlista_buscar_elemento(DNodo **head, int dato) {
+    DNodo *cur = *head;
+    while (cur != NULL) {
+        if (cur->dato == dato) {
+            printf("Elemento %d encontrado\n", dato);
+            return;
+        }
+        cur = cur->next;
+    }
+    printf("Elemento %d no encontrado\n", dato);
+}
 
 /* TODO: liberar toda la lista */
 void dlista_liberar(DNodo **head) {
-    /* TODO */
+    DNodo *cur = *head;
+    while (cur != NULL) {
+        DNodo *next = cur->next;
+        free(cur);
+        cur = next;
+    }
+    *head = NULL;
 }

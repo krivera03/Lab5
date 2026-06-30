@@ -1,5 +1,5 @@
-#ifndef DLISTA_H
-#define DLISTA_H
+#ifndef FUNCIONES_H
+#define FUNCIONES_H
 
 typedef struct DNodo {
     int           dato;
@@ -19,8 +19,11 @@ void dlista_insertar_final(DNodo **head, int dato);
 /* Inserta en nodo apuntado por 'pos'. */
 void dlista_insertar_posicion(DNodo **head, DNodo *pos, int dato);
 
-/* Elimina el nodo apuntado por 'nodo'. O(1). */
-void dlista_eliminar_nodo(DNodo **head, DNodo *nodo);
+/* Elimina el nodo a su primera ocurrencia con valor de dato*/
+void dlista_eliminar_nodo(DNodo **head, int dato);
+
+/* Busca un elemento en la lista */
+void dlista_buscar_elemento(DNodo **head, int dato);
 
 /* Imprime hacia adelante  */
 void dlista_imprimir_adelante(DNodo *head);
