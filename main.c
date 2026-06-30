@@ -3,6 +3,7 @@
 #include "funciones.h"
 
 int main(void) {
-   
+    DNodo *head =NULL
+
     return 0;
 }
