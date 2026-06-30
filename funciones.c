@@ -97,27 +97,40 @@ void dlista_insertar_posicion(DNodo **head, DNodo *pos, int dato) {
  * Reconectar el prev del siguiente y el next del anterior.
  * Caso especial: el nodo a eliminar es *head. */
 void dlista_eliminar_nodo(DNodo **head, int dato) {
-
-    while (temp != NULL && temp->data != data)
-        temp = temp->next;
-
-    if (temp == NULL) {
-        printf("Elemento no encontrado\n");
+    DNodo *cur = *head;
+    DNodo *past = NULL;
+    int salvo = 0; // para identificar si  se encontro nodo a eliminar o solo llega al final
+    //printf("FWD: ");
+    while (cur != NULL && cur->dato != dato) {
+        past = cur;
+        cur = cur->next;
+    }
+    if (cur == NULL || cur->dato != dato) {
+        printf("No se encontro el nodo a eliminar\n");
         return;
+    } else {
+        if (cur == *head) { // si es el head
+            if (past == NULL) { // si es el unico nodo
+                free(cur);
+                *head = NULL;
+                return;
+            }
+            *head = cur->next; // actualiza head al siguiente nodo    
+            (*head)->prev = NULL; // actualiza el prev del nuevo head a NULL
+            
+        } else {
+
+            past->next = cur->next; // reconecta el next del anterior al siguiente
+            if (cur->next != NULL) { // si hay un siguiente nodo, actualiza su prev al anterior
+                cur->next->prev = past;
+            }
+        }
+        free(cur); // libera el nodo eliminado
     }
 
-    if (temp->prev != NULL)
-        temp->prev->next = temp->next;
-    else
-        *head = temp->next;
-
-    if (temp->next != NULL)
-        temp->next->prev = temp->prev;
-
-    free(temp);
 }
     /* TODO */
-}
+
 
 /* TODO: liberar toda la lista */
 void dlista_liberar(DNodo **head) {
