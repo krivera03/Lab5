@@ -28,6 +28,14 @@ int sa_pop(StackArr *s) {
 
 /* TODO: peek — ver el tope sin extraer */
 int sa_peek(StackArr *s) {
+    if (s->arr.size == 0) {
+        printf("Stack vacío\n");
+        return -1;
+    }
+
+    int valor = s->arr.data[s->arr.size - 1]; // obtener el valor del tope/final
+   printf("Valor en el tope: %d\n", valor);
+
     /* TODO */
     return -1;
 }
