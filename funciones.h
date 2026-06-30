@@ -26,5 +26,11 @@ Nodo *lista_buscar(Nodo *head, int dato);
 int lista_eliminar(Nodo **head, int dato);
 
 
+/* Imprime la lista de inicio a fin */
+void lista_imprimir(Nodo *head);
+
+/*Liberar memoria de la lista enlazada*/
+void lista_liberar(Nodo **head)
+
 
 #endif

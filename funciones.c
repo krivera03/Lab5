@@ -102,3 +102,29 @@ int lista_eliminar(Nodo **head, int dato) {
     free(actual);                                 /*Libera la memoria del nodo eliminado*/
     return 1;
 }
+
+/*Imprimir la lista hacia delante*/
+void lista_imprimir(Nodo *head) {
+    Nodo *actual = head;
+
+    while (actual != NULL) {
+        printf("%d -> ", actual->dato);
+        actual = actual->next;
+    }
+
+    printf("NULL\n");
+}
+
+/*Liberar memoria de la lista enlazada*/
+void lista_liberar(Nodo **head) {
+    Nodo *actual = *head;
+    Nodo *siguiente = NULL;
+
+    while (actual != NULL) {
+        siguiente = actual->next;
+        free(actual);
+        actual = siguiente;
+    }
+
+    *head = NULL;  /*Lista queda vacía*/
+}
