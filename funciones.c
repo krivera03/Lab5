@@ -42,6 +42,10 @@ int sa_peek(StackArr *s) {
 
 /* TODO: empty */
 int sa_empty(StackArr *s) {
+     if (s->arr.size == 0) {
+        printf("Stack vacío\n");
+        return -1;
+    }
     /* TODO */
     return 1;
 }
@@ -49,4 +53,8 @@ int sa_empty(StackArr *s) {
 /* TODO: free */
 void sa_free(StackArr *s) {
     /* TODO */
+    free(s->arr.data);
+    s->arr.data = NULL; //Limpia estructura
+    s->arr.size = 0;
+    s->arr.capacity = 0;
 }
