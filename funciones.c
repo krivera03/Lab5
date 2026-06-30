@@ -80,3 +80,25 @@ Nodo *lista_buscar(Nodo *head, int dato) {
     }
     return NULL;                       
 }
+
+/*Eliminar la primera ocurrencia de un valor en la lista*/
+int lista_eliminar(Nodo **head, int dato) {
+    Nodo *actual = *head;
+    Nodo *anterior = NULL;
+
+    while (actual != NULL && actual->dato != dato) {   /*Buscar el nodo*/
+        anterior = actual;
+        actual = actual->next;
+    }
+
+    if (actual == NULL) return 0;                   /*Si no existe el valor*/
+
+    if (anterior == NULL) {                        /*Si el nodo a eliminar es el primero*/
+        *head = actual->next;
+    } else {
+        anterior->next = actual->next;
+    }
+
+    free(actual);                                 /*Libera la memoria del nodo eliminado*/
+    return 1;
+}

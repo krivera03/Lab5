@@ -22,6 +22,9 @@ void lista_insertar_pos(Nodo **head, int dato, int pos);
 /*Buscar elemento en la lista*/
 Nodo *lista_buscar(Nodo *head, int dato);
 
+/*Eliminar la primera ocurrencia de un valor en la lista*/
+int lista_eliminar(Nodo **head, int dato);
+
 
 
 #endif
