@@ -64,6 +64,19 @@ void lista_insertar_pos(Nodo **head, int dato, int pos) {
         actual = actual->next;
     }
 
-    nuevo->next = actual->next;   /*Inserta el nodo en la posición específica*/
+    nuevo->next = actual->next;              /*Inserta el nodo en la posición específica*/
     actual->next = nuevo;
 } 
+
+/*Buscar elemento en la lista*/
+Nodo *lista_buscar(Nodo *head, int dato) {
+    Nodo *actual = head;
+
+    while (actual != NULL) {               /*Recorre toda la lista*/
+        if (actual->dato == dato) {
+            return actual;                 /*Devuelve el nodo cuando lo encuentra*/
+        } 
+        actual = actual->next;
+    }
+    return NULL;                       
+}

@@ -19,6 +19,8 @@ void lista_insertar_final(Nodo **head, int dato);
 /*Insertar en una posición específica*/
 void lista_insertar_pos(Nodo **head, int dato, int pos);
 
+/*Buscar elemento en la lista*/
+Nodo *lista_buscar(Nodo *head, int dato);
 
 
 
