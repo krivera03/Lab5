@@ -40,7 +40,7 @@ int sa_peek(StackArr *s) {
     return -1;
 }
 
-/* TODO: empty */
+/* TODO: empty */ //regresa -1 si está vacío, 1 si no lo está
 int sa_empty(StackArr *s) {
      if (s->arr.size == 0) {
         printf("Stack vacío\n");
