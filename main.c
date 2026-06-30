@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "funciones.h"
 
-void main() {
+int main(void) {
    
     return 0;
 }
