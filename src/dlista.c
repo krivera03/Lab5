@@ -109,7 +109,7 @@ void dlista_eliminar_nodo(DNodo **head, int dato) {
         return;
     } else {
         if (cur == *head) { // si es el head
-            if (past == NULL) { // si es el unico nodo
+            if (cur->next == NULL) { // si es el unico nodo
                 free(cur);
                 *head = NULL;
                 return;
