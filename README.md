@@ -14,10 +14,10 @@ Finalmente, se desarrolla la implementación de una pila (stack), que incluye la
 ### Archivos principales
 
 - **main.c**: Contiene la función principal del programa y el menú de interacción.
-- **arreglosDinamicos.c / arreglosDinamicos.h**: Implementación de arreglos dinámicos con sus operaciones.
-- **listasEnlazadas.c / listasEnlazadas.h**: Implementación de listas enlazadas con sus operaciones.
-- **listasDoblesEnlazadas.c / listasDoblesEnlazadas.h**: Implementación de listas doblemente enlazadas con sus operaciones.
-- **stack.c / stack.h**: Implementación de stack con sus operaciones.
+- **dinarr.c / dinarr.h**: Implementación de arreglos dinámicos con sus operaciones.
+- **lista.c / lista.h**: Implementación de listas enlazadas con sus operaciones.
+- **dlista.c / dlista.h**: Implementación de listas doblemente enlazadas con sus operaciones.
+- **stackarr.c / stackarr.h**: Implementación de stack con sus operaciones.
 - **Makefile**: Archivo que realiza la compilación del proyecto.
 - **README.md**: Documentación del proyecto.
 
@@ -37,6 +37,11 @@ make run
 ```
 
 Si la compilación es exitosa, se generará el archivo ejecutable del programa.
+
+4. Para revisión de fugas de memoria ejecutar:
+```bash
+make valgrind
+```
 
 ## Pasos para ejecutar
 
