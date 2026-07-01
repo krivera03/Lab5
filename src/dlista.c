@@ -88,8 +88,23 @@ void dlista_insertar_final(DNodo **head, int dato) {
  * - pos->next == NULL: el nuevo nodo queda al final */
 void dlista_insertar_posicion(DNodo **head, DNodo *pos, int dato) {
     /* TODO */
-    
-    (void)head;
+    if (pos == NULL) return;
+
+    DNodo *nuevo = dnodo_crear(dato);
+
+    // Insertar en el medio de la lista
+    if (pos->next != NULL) {
+        DNodo *siguiente = pos->next; // guarda el siguiente nodo de pos
+        nuevo->next = siguiente; // hace que el next del nuevo nodo apunte al siguiente de pos
+        nuevo->prev = pos; // hace que el prev del nuevo nodo apunte a pos
+        pos->next = nuevo; // hace que el next de pos apunte al nuevo nodo
+        siguiente->prev = nuevo; // hace que el prev del siguiente de pos apunte al nuevo nodo  
+        
+    }
+    // Insertar al final 
+    else {
+        dlista_insertar_final(head, dato); // si pos->next es NULL, inserta al final
+    }  
 }
 
 /* TODO: eliminar un nodo dado su puntero — O(1)
@@ -98,7 +113,6 @@ void dlista_insertar_posicion(DNodo **head, DNodo *pos, int dato) {
 void dlista_eliminar_nodo(DNodo **head, int dato) {
     DNodo *cur = *head;
     DNodo *past = NULL;
-    int salvo = 0; // para identificar si  se encontro nodo a eliminar o solo llega al final
     //printf("FWD: ");
     while (cur != NULL && cur->dato != dato) {
         past = cur;

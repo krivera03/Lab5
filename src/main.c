@@ -111,6 +111,11 @@ int main(void) {
     dlista_insertar_final(&cabeza, 5);
     dlista_imprimir_adelante(cabeza);
 
+    //  Insertar en posición
+    printf("\nInsertar después del head:\n");
+    dlista_insertar_posicion(&cabeza, cabeza, 99); // inserta después del head
+    dlista_imprimir_adelante(cabeza);
+
     //  Imprimir hacia atrás
     printf("\nImprimir hacia atrás:\n");
     dlista_imprimir_atras(cabeza);
