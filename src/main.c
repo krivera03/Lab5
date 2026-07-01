@@ -49,25 +49,25 @@ int main(void) {
 
     printf("=== PRUEBA LISTA ENLAZADA ===\n\n");
 
-    // 🔹 Insertar al inicio
+    // Insertar al inicio
     printf("Insertar al inicio:\n");
     lista_insertar_inicio(&head, 3);
     lista_insertar_inicio(&head, 2);
     lista_insertar_inicio(&head, 1);
     lista_imprimir(head);
 
-    // 🔹 Insertar al final
+    //  Insertar al final
     printf("\nInsertar al final:\n");
     lista_insertar_final(&head, 4);
     lista_insertar_final(&head, 5);
     lista_imprimir(head);
 
-    // 🔹 Insertar en posición
+    //  Insertar en posición
     printf("\nInsertar en posicion 2:\n");
     lista_insertar_pos(&head, 99, 2);
     lista_imprimir(head);
 
-    // 🔹 Buscar
+    //  Buscar
     printf("\nBuscar elemento 3:\n");
     Nodo *encontrado = lista_buscar(head, 3);
     if(encontrado != NULL){
@@ -76,12 +76,12 @@ int main(void) {
         printf("No encontrado\n");
     }
 
-    // 🔹 Eliminar
+    //  Eliminar
     printf("\nEliminar elemento 99:\n");
     lista_eliminar(&head, 99);
     lista_imprimir(head);
 
-    // 🔹 Eliminar elemento que no existe
+    //  Eliminar elemento que no existe
     printf("\nEliminar elemento inexistente (100):\n");
     int res = lista_eliminar(&head, 100);
     printf("Resultado: %d\n", res);
@@ -97,50 +97,50 @@ int main(void) {
 
     printf("=== PRUEBA LISTA DOBLEMENTE ENLAZADA ===\n\n");
 
-    // 🔹 Insertar al inicio
+    // Insertar al inicio
     printf("Insertar al inicio:\n");
     dlista_insertar_inicio(&head, 3);
     dlista_insertar_inicio(&head, 2);
     dlista_insertar_inicio(&head, 1);
     dlista_imprimir_adelante(head);
 
-    // 🔹 Insertar al final
+    //  Insertar al final
     printf("\nInsertar al final:\n");
     dlista_insertar_final(&head, 4);
     dlista_insertar_final(&head, 5);
     dlista_imprimir_adelante(head);
 
-    // 🔹 Imprimir hacia atrás
+    //  Imprimir hacia atrás
     printf("\nImprimir hacia atrás:\n");
     dlista_imprimir_atras(head);
 
-    // 🔹 Buscar
+    //  Buscar
     printf("\nBuscar elemento 3:\n");
     dlista_buscar_elemento(&head, 3);
 
     printf("\nBuscar elemento inexistente (100):\n");
     dlista_buscar_elemento(&head, 100);
 
-    // 🔹 Eliminar nodo intermedio
+    //  Eliminar nodo intermedio
     printf("\nEliminar elemento 3:\n");
     dlista_eliminar_nodo(&head, 3);
     dlista_imprimir_adelante(head);
 
-    // 🔹 Eliminar head
+    //  Eliminar head
     printf("\nEliminar head (1):\n");
     dlista_eliminar_nodo(&head, 1);
     dlista_imprimir_adelante(head);
 
-    // 🔹 Eliminar último
+    //  Eliminar ultimo
     printf("\nEliminar último (5):\n");
     dlista_eliminar_nodo(&head, 5);
     dlista_imprimir_adelante(head);
 
-    // 🔹 Imprimir hacia atrás otra vez
+    // Imprimir hacia atrás otra vez
     printf("\nImprimir hacia atrás:\n");
     dlista_imprimir_atras(head);
 
-    // 🔹 Liberar
+    //  Liberar
     printf("\nLiberando lista:\n");
     dlista_liberar(&head);
     dlista_imprimir_adelante(head); // debería no imprimir nada
@@ -152,41 +152,41 @@ int main(void) {
 
     printf("=== PRUEBA STACK ARRAY ===\n\n");
 
-    // 🔹 Push
+    //  Push
     printf("Push 10, 20, 30:\n");
     sa_push(&s, 10);
     sa_push(&s, 20);
     sa_push(&s, 30);
 
-    // 🔹 Peek
+    //  Peek
     printf("\nPeek:\n");
     int top = sa_peek(&s);
     printf("Tope: %d\n", top);
 
-    // 🔹 Pop
+    //  Pop
     printf("\nPop:\n");
     printf("Pop: %d\n", sa_pop(&s));
     printf("Pop: %d\n", sa_pop(&s));
 
-    // 🔹 Peek otra vez
+    //  Peek otra vez
     printf("\nPeek:\n");
     printf("Tope: %d\n", sa_peek(&s));
 
-    // 🔹 Pop hasta vacío
+    //  Pop hasta vacío
     printf("\nVaciar stack:\n");
     printf("Pop: %d\n", sa_pop(&s));
     printf("Pop extra (error esperado): %d\n", sa_pop(&s));
 
-    // 🔹 Empty
+    //  Empty
     printf("\n¿Está vacío?\n");
     printf("%d\n", sa_empty(&s));
 
-    // 🔹 Push después de vacío
+    //  Push después de vacío
     printf("\nPush después de vaciar:\n");
     sa_push(&s, 99);
     printf("Tope: %d\n", sa_peek(&s));
 
-    // 🔹 Free
+    //  Free
     printf("\nLiberando stack:\n");
     sa_free(&s);
 
