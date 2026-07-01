@@ -100,13 +100,13 @@ int main(void) {
     // Insertar al inicio
     printf("Insertar al inicio:\n");
     dlista_insertar_inicio(&cabeza, 3);
-    dlista_insertar_inicio(&cabeza, 2);
+    dlista_insertar_inicio(&cabeza, 20);
     dlista_insertar_inicio(&cabeza, 1);
     dlista_imprimir_adelante(cabeza);
 
     //  Insertar al final
     printf("\nInsertar al final:\n");
-    dlista_insertar_final(&cabeza, 4);
+    dlista_insertar_final(&cabeza, 40);
     dlista_insertar_final(&cabeza, 5);
     dlista_imprimir_adelante(cabeza);
 
