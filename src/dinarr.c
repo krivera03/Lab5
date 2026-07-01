@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "funciones.h"
+
 
 /*
     Inicializa la estructura y reserva memoria para los datos.
