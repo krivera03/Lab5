@@ -2,8 +2,9 @@
 #define FUNCIONES_H
 
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <stddef.h>
-
 typedef struct{
     int *data;
     size_t size;

@@ -1,5 +1,7 @@
 #ifndef DLISTA_H
 #define DLISTA_H
+#include <stdio.h>
+#include <stdlib.h>
 #include <stddef.h>
 typedef struct DNodo {
     int           dato;

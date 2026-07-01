@@ -1,6 +1,8 @@
 #ifndef LISTA_H
 #define LISTA_H
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
 /*Estructura que representa un nodo de la lista enlanzada*/
 typedef struct Nodo {
     int dato;

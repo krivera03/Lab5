@@ -1,5 +1,7 @@
 #ifndef STACKARR_H
 #define STACKARR_H
+#include <stdio.h>
+#include <stdlib.h>
 #include <stddef.h>
 #include "dinarr.h"
 
