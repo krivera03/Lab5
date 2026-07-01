@@ -147,7 +147,7 @@ int main(void) {
 
     printf("\n=== FIN PRUEBA DLISTA ===\n\n");
 
-        StackArr s;
+    StackArr s;
     sa_init(&s, 2);
 
     printf("=== PRUEBA STACK ARRAY ===\n\n");
@@ -159,18 +159,19 @@ int main(void) {
     sa_push(&s, 30);
 
     //  Peek
-    printf("\nPeek:\n");
-    int top = sa_peek(&s);
-    printf("Tope: %d\n", top);
+   
+    sa_peek(&s);
+
 
     //  Pop
-    printf("\nPop:\n");
     printf("Pop: %d\n", sa_pop(&s));
+    sa_peek(&s);
     printf("Pop: %d\n", sa_pop(&s));
 
     //  Peek otra vez
-    printf("\nPeek:\n");
-    printf("Tope: %d\n", sa_peek(&s));
+  
+    sa_peek(&s);
+  
 
     //  Pop hasta vacío
     printf("\nVaciar stack:\n");
@@ -184,7 +185,7 @@ int main(void) {
     //  Push después de vacío
     printf("\nPush después de vaciar:\n");
     sa_push(&s, 99);
-    printf("Tope: %d\n", sa_peek(&s));
+    sa_peek(&s);
 
     //  Free
     printf("\nLiberando stack:\n");
