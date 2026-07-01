@@ -34,20 +34,20 @@ int sa_peek(StackArr *s) {
     }
 
     int valor = s->arr.data[s->arr.size - 1]; // obtener el valor del tope/final
-   printf("Valor en el tope: %d\n", valor);
+    printf("Valor en el tope: %d\n", valor);
 
     /* TODO */
-    return -1;
+    return valor;
 }
 
-/* TODO: empty */ //regresa -1 si está vacío, 1 si no lo está
+/* TODO: empty */ //regresa 1 si está vacío, 0 si no lo está
 int sa_empty(StackArr *s) {
      if (s->arr.size == 0) {
         printf("Stack vacío\n");
-        return -1;
+        return 1;
     }
     /* TODO */
-    return 1;
+    return 0;
 }
 
 /* TODO: free */

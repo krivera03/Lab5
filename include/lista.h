@@ -30,7 +30,7 @@ int lista_eliminar(Nodo **head, int dato);
 void lista_imprimir(Nodo *head);
 
 /*Liberar memoria de la lista enlazada*/
-void lista_liberar(Nodo **head)
+void lista_liberar(Nodo **head);
 
 
 #endif

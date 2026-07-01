@@ -9,13 +9,12 @@ DNodo *dnodo_crear(int dato) {
     return n;
 }
 
-/* DADA: imprimir hacia adelante y atrás */
+/* DADA: imprimir hacia adelante */
 void dlista_imprimir_adelante(DNodo *head) {
     DNodo *cur = head;
     //printf("FWD: ");
     while (cur) {
         printf("%d ", cur->dato);
-        ultimo = cur;
         cur = cur->next;
     }
     printf("\n");
@@ -69,7 +68,7 @@ void dlista_insertar_final(DNodo **head, int dato) {
         *head = dnodo_crear(dato); //crea nodo y asignarle head si no existe
     } else {
         DNodo *nuevo_ultimo = dnodo_crear(dato); // crea nodo
-        Dnodo *ultimo = *head; // crea un puntero para recorrer la lista y encontrar el ultimo nodo
+        DNodo *ultimo = *head; // crea un puntero para recorrer la lista y encontrar el ultimo nodo
         while (ultimo->next != NULL) { // recorre la lista hasta encontrar el ultimo
             ultimo = ultimo->next;
         }
