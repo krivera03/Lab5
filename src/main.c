@@ -87,63 +87,63 @@ int main(void) {
     printf("Resultado: %d\n", res);
     lista_imprimir(head);
 
-    // 🔹 Liberar memoria
+    //  Liberar memoria
     printf("\nLiberando lista:\n");
     lista_liberar(&head);
     lista_imprimir(head); // debería estar vacía
 
     printf("\n=== FIN PRUEBA LISTA ===\n\n");
-     DNodo *head = NULL;
+     DNodo *cabeza = NULL;
 
     printf("=== PRUEBA LISTA DOBLEMENTE ENLAZADA ===\n\n");
 
     // Insertar al inicio
     printf("Insertar al inicio:\n");
-    dlista_insertar_inicio(&head, 3);
-    dlista_insertar_inicio(&head, 2);
-    dlista_insertar_inicio(&head, 1);
-    dlista_imprimir_adelante(head);
+    dlista_insertar_inicio(&cabeza, 3);
+    dlista_insertar_inicio(&cabeza, 2);
+    dlista_insertar_inicio(&cabeza, 1);
+    dlista_imprimir_adelante(cabeza);
 
     //  Insertar al final
     printf("\nInsertar al final:\n");
-    dlista_insertar_final(&head, 4);
-    dlista_insertar_final(&head, 5);
-    dlista_imprimir_adelante(head);
+    dlista_insertar_final(&cabeza, 4);
+    dlista_insertar_final(&cabeza, 5);
+    dlista_imprimir_adelante(cabeza);
 
     //  Imprimir hacia atrás
     printf("\nImprimir hacia atrás:\n");
-    dlista_imprimir_atras(head);
+    dlista_imprimir_atras(cabeza);
 
     //  Buscar
     printf("\nBuscar elemento 3:\n");
-    dlista_buscar_elemento(&head, 3);
+    dlista_buscar_elemento(&cabeza, 3);
 
     printf("\nBuscar elemento inexistente (100):\n");
-    dlista_buscar_elemento(&head, 100);
+    dlista_buscar_elemento(&cabeza, 100);
 
     //  Eliminar nodo intermedio
     printf("\nEliminar elemento 3:\n");
-    dlista_eliminar_nodo(&head, 3);
-    dlista_imprimir_adelante(head);
+    dlista_eliminar_nodo(&cabeza, 3);
+    dlista_imprimir_adelante(cabeza);
 
     //  Eliminar head
     printf("\nEliminar head (1):\n");
-    dlista_eliminar_nodo(&head, 1);
-    dlista_imprimir_adelante(head);
+    dlista_eliminar_nodo(&cabeza, 1);
+    dlista_imprimir_adelante(cabeza);
 
     //  Eliminar ultimo
     printf("\nEliminar último (5):\n");
-    dlista_eliminar_nodo(&head, 5);
-    dlista_imprimir_adelante(head);
+    dlista_eliminar_nodo(&cabeza, 5);
+    dlista_imprimir_adelante(cabeza);
 
     // Imprimir hacia atrás otra vez
     printf("\nImprimir hacia atrás:\n");
-    dlista_imprimir_atras(head);
+    dlista_imprimir_atras(cabeza);
 
     //  Liberar
     printf("\nLiberando lista:\n");
-    dlista_liberar(&head);
-    dlista_imprimir_adelante(head); // debería no imprimir nada
+    dlista_liberar(&cabeza);
+    dlista_imprimir_adelante(cabeza); // debería no imprimir nada
 
     printf("\n=== FIN PRUEBA DLISTA ===\n\n");
 

@@ -1,3 +1,5 @@
+#include "stackarr.h"
+
 /* DADA: inicializar */
 void sa_init(StackArr *s, size_t cap) {
     da_init(&s->arr, cap);

@@ -1,5 +1,5 @@
 
-
+#include "dinarr.h"
 /*
     Inicializa la estructura y reserva memoria para los datos.
 */

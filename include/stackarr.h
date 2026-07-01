@@ -1,6 +1,8 @@
 #ifndef STACKARR_H
 #define STACKARR_H
+#include <stddef.h>
 #include "dinarr.h"
+
 typedef struct {
     DinaArray arr;
 } StackArr;

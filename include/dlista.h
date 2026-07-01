@@ -1,6 +1,6 @@
 #ifndef DLISTA_H
 #define DLISTA_H
-
+#include <stddef.h>
 typedef struct DNodo {
     int           dato;
     struct DNodo *next;

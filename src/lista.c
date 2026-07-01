@@ -1,5 +1,5 @@
 
-
+#include "lista.h"
 
 /*------Listas Enlazadas--------*/
 
