@@ -11,36 +11,37 @@ int main(void) {
     printf("\n=== PRUEBA ARREGLO DINAMICO ===\n\n");
     DinaArray arr;
 
-    printf("=== INIT ===\n");
+    printf("INIT capacidad 2\n");
     da_init(&arr, 2);
     da_print(&arr);
 
-    printf("\n=== PUSH ===\n");
+    printf("\nPush de 10, 20, 30, 40\n");
     da_push(&arr, 10);
     da_push(&arr, 20);
     da_push(&arr, 30); // fuerza realloc
     da_push(&arr, 40);
     da_print(&arr);
 
-    printf("\n=== GET ===\n");
+    printf("\nGET");
     printf("Elemento en indice 1: %d\n", da_get(&arr, 1));
     printf("Elemento en indice 10 (invalido): %d\n", da_get(&arr, 10));
 
-    printf("\n=== REMOVE ===\n");
+    printf("\nEliminar elemento en indice 1\n");
     da_remove(&arr, 1);
     da_print(&arr);
 
-    printf("\n=== REMOVE INVALIDO ===\n");
+    printf("\nEliminar invalido indice 100\n");
     da_remove(&arr, 100); // no debe crashear
     da_print(&arr);
 
-    printf("\n=== PUSH MAS ===\n");
+    printf("\nOtros push de 50 y 60\n");
     da_push(&arr, 50);
     da_push(&arr, 60);
     da_print(&arr);
 
-    printf("\n=== FREE ===\n");
+    printf("\nLiberar arreglo:\n");
     da_free(&arr);
+    printf("Liberado. Imprimir arreglo:\n");
     da_print(&arr); // debería mostrar vacío
     ////
 
