@@ -58,5 +58,5 @@ void sa_free(StackArr *s) {
     free(s->arr.data);
     s->arr.data = NULL; //Limpia estructura
     s->arr.size = 0;
-    s->arr.capacity = 0;
+    s->arr.capacidad = 0;
 }
